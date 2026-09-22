@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail Media Disclosure Benchmark</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1: #fcfcfb; --page-plane: #f9f9f7;
+    --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #898781;
+    --gridline: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --series-1: #2a78d6; --good: #0ca30c; --warning: #fab219; --warning-text: #a66a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1: #1a1a19; --page-plane: #0d0d0d;
+      --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+      --gridline: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+      --series-1: #3987e5; --good: #0ca30c; --warning: #fab219; --warning-text: #fab219;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1: #1a1a19; --page-plane: #0d0d0d;
+    --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+    --gridline: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5; --good: #0ca30c; --warning: #fab219; --warning-text: #fab219;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page-plane); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .viz-root { background: var(--page-plane); padding: 24px 16px; }
+  .card { max-width: 780px; margin: 0 auto; background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; }
+  h1 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin: 0 0 4px; }
+  .subtitle { font-size: 13px; color: var(--text-secondary); margin: 0 0 22px; line-height: 1.5; }
+
+  .row { margin-bottom: 20px; }
+  .row-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; column-gap: 12px; row-gap: 2px; margin-bottom: 5px; }
+  .row-name { font-size: 13.5px; font-weight: 600; color: var(--text-primary); }
+  .row-period { font-size: 11px; color: var(--text-muted); margin-left: 6px; font-weight: 400; }
+  .row-value { font-size: 13px; color: var(--text-secondary); font-variant-numeric: tabular-nums; white-space: nowrap; margin-left: auto; }
+  .track { height: 22px; border-radius: 5px; background: var(--gridline); position: relative; overflow: hidden; }
+  .fill { height: 100%; border-radius: 5px 0 0 5px; }
+  .badge-row { margin-top: 6px; display: flex; align-items: center; gap: 8px; }
+  .badge { font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
+  .badge.good { background: rgba(12,163,12,0.15); color: var(--good); }
+  .badge.warning { background: rgba(250,178,25,0.18); color: var(--warning-text); }
+  .badge-note { font-size: 11px; color: var(--text-muted); }
+
+  .footnote { margin-top: 20px; font-size: 11.5px; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--gridline); padding-top: 12px; overflow-wrap: anywhere; }
+  .footnote code { word-break: break-all; }
+</style>
+</head>
+<body>
+<div class="viz-root">
+  <div class="card">
+    <h1>Retail Media Disclosure Benchmark, India</h1>
+    <p class="subtitle">GOV/GMV scale (bar length) vs. whether each company discloses advertising
+    revenue as a clean, standalone % of GOV. Only Swiggy does — Nykaa and Eternal disclose ad
+    <em>spend</em> (a different metric) but not ad <em>revenue</em>, so no rate-card figure is
+    estimated for them.</p>
+
+    <div class="row">
+      <div class="row-top">
+        <span class="row-name">Swiggy — Food Delivery <span class="row-period">Q4 FY26</span></span>
+        <span class="row-value">₹9,005 cr GOV</span>
+      </div>
+      <div class="track"><div class="fill" style="width:45.1%; background:var(--series-1)"></div></div>
+      <div class="badge-row">
+        <span class="badge good">AD REVENUE DISCLOSED</span>
+        <span class="badge-note">≥4% of GOV → implied ≥₹360.2cr ad revenue this quarter</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row-top">
+        <span class="row-name">Swiggy — Instamart (Quick Commerce) <span class="row-period">Q4 FY26</span></span>
+        <span class="row-value">₹7,881 cr GOV</span>
+      </div>
+      <div class="track"><div class="fill" style="width:39.5%; background:var(--series-1)"></div></div>
+      <div class="badge-row">
+        <span class="badge good">TARGET DISCLOSED</span>
+        <span class="badge-note">6-7% of GOV is Swiggy's own forward target (not current actual) → ₹512.3cr at midpoint</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row-top">
+        <span class="row-name">Nykaa (FSN E-Commerce) — Overall <span class="row-period">FY26</span></span>
+        <span class="row-value">₹19,963 cr GMV</span>
+      </div>
+      <div class="track"><div class="fill" style="width:100%; background:var(--series-1)"></div></div>
+      <div class="badge-row">
+        <span class="badge warning">INSUFFICIENT DISCLOSURE</span>
+        <span class="badge-note">FY25 ₹995cr figure found is Nykaa's own ad SPEND, not ad revenue — correctly excluded</span>
+      </div>
+    </div>
+
+    <div class="footnote">
+      Bar length is GOV/GMV scaled to the largest figure shown (Nykaa FY26, ₹19,963cr) — note the
+      periods differ (quarterly for Swiggy, annual for Nykaa), so bar length compares scale only,
+      not like-for-like monetization intensity. Source: <code>data/raw/marketplace_disclosures.csv</code>.
+      Eternal (Zomato/Blinkit) is excluded from this chart entirely — no GOV/GMV figure was sourced
+      for it this session, only revenue, which is not comparable post Blinkit's inventory-model change.
+    </div>
+  </div>
+</div>
+</body>
+</html>
