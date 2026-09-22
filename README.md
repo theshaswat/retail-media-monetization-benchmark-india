@@ -34,9 +34,9 @@ bundles order facilitation, delivery income, advertising, onboarding and service
 into one line, and Eternal's 31% FY25 take rate is blended across the business with ad
 revenue never broken out.
 
-A three-row table built by treating advertising expense as advertising revenue would have
-looked complete and been wrong by construction. This version is less tidy and states what
-is not known.
+Treating advertising expense as advertising revenue would have filled all three rows and
+produced a peer-group table off a metric measuring the opposite of what the benchmark
+claims. The two `INSUFFICIENT_DISCLOSURE` rows are what the public record supports.
 
 Also note the Instamart row is a **forward target Swiggy set for itself, not a current
 actual**, and is labelled that way in the output file, not only here. Blinkit's segment
@@ -55,12 +55,12 @@ explicitly labelled `_TARGET` row — exists for that segment. Every other case 
 out as `INSUFFICIENT_DISCLOSURE`. Nothing is estimated, interpolated from a peer, or
 inferred from a blended metric.
 
-The discipline is carried in the schema rather than in the analyst's memory: every row in
+The exclusions live in the schema rather than in the prose. Every row in
 `data/raw/marketplace_disclosures.csv` carries a `metric_type`, and the values
 `ad_SPEND_not_ad_revenue_EXCLUDED`, `bundled_revenue_not_ad_only` and
-`blended_take_rate_not_ad_only` make the exclusions explicit in the data itself. A later
-reader cannot pick up the ad-spend figure and use it as revenue without overriding a field
-that says not to.
+`blended_take_rate_not_ad_only` name the reason in the data itself. A later reader cannot
+pick up the ad-spend figure and use it as revenue without overriding a field that says
+not to.
 
 ## Structure
 
