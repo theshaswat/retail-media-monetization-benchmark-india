@@ -44,7 +44,7 @@ def build_benchmark(rows: list[dict]) -> list[dict]:
         if ad_pct_row is None:
             row["ad_revenue_pct_of_gov"] = "INSUFFICIENT_DISCLOSURE"
             row["implied_ad_revenue_inr_crore"] = "INSUFFICIENT_DISCLOSURE"
-            row["basis"] = "No standalone ad-revenue-as-%-of-GOV disclosure found in sources reviewed this session"
+            row["basis"] = "No standalone ad-revenue-as-%-of-GOV disclosure found in the sources reviewed"
         else:
             pct = float(ad_pct_row["value"])
             is_target = ad_pct_row["metric_type"].endswith("_TARGET")

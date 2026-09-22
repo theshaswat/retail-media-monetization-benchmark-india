@@ -18,14 +18,6 @@ advertising *spend* — which this project deliberately excluded rather than con
 | Nykaa (FSN E-Commerce) | FY26 | INR 19,963cr | INSUFFICIENT DISCLOSURE | — |
 | Eternal (Zomato/Blinkit) | — | not sourced | INSUFFICIENT DISCLOSURE | — |
 
-## Resume-ready line
-
-*"Benchmarked retail-media ad monetization across three listed Indian marketplaces from public
-disclosures; found only 1 of 3 discloses ad revenue as a standalone % of GOV (Swiggy, ≥4% in food
-delivery), and correctly excluded two companies' ad-spend figures that are commonly mistaken for ad
-revenue — deriving an implied INR 360-512cr quarterly ad-revenue range from the one clean
-disclosure."*
-
 ## Why this finding matters more than a forced rate card
 
 A rate-card benchmark built by treating "advertising expense" as "advertising revenue" for Nykaa and

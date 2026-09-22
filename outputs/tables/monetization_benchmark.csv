@@ -1,4 +1,4 @@
 company,segment,period,gov_gmv_inr_crore,ad_revenue_pct_of_gov,implied_ad_revenue_inr_crore,basis,gov_source
 Swiggy,Food Delivery,Q4 FY26,9005,"4.0% (disclosed floor, >=)",360.2,"Disclosed as '>4%' - a floor, not a point estimate. Used as-is; true figure is 4% or higher.","Swiggy Q4 FY26 press release (medianama.com summary), +22.6% YoY"
 Swiggy,Quick Commerce (Instamart),Q4 FY26,7881,"6.5% (forward target, not current actual)",512.3,"Disclosed as an EXPECTED future range (6-7%), NOT a current actual figure. Midpoint used, flagged as forward-looking.","Storyboard18, citing Swiggy Q4 FY26 results, +68.8% YoY"
-Nykaa (FSN E-Commerce),Overall,FY26,19963,INSUFFICIENT_DISCLOSURE,INSUFFICIENT_DISCLOSURE,No standalone ad-revenue-as-%-of-GOV disclosure found in sources reviewed this session,"InvestyWise, citing Nykaa FY26 results, +28% YoY"
+Nykaa (FSN E-Commerce),Overall,FY26,19963,INSUFFICIENT_DISCLOSURE,INSUFFICIENT_DISCLOSURE,No standalone ad-revenue-as-%-of-GOV disclosure found in the sources reviewed,"InvestyWise, citing Nykaa FY26 results, +28% YoY"

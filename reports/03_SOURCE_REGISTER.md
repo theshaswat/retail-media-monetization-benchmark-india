@@ -11,6 +11,6 @@
 | 7 | Storyboard18 | Eternal's Q4 FY26 ad-spend figure (INR 936cr) — excluded, same reasoning as Nykaa | 22 Sep 2026 |
 | 8 | LinkedIn/Startup Pedia summary of Eternal Q2 FY26 commentary | Eternal's 31% blended take-rate commentary — directional only, not used as a point estimate | 22 Sep 2026 |
 
-**Two primary PDFs attempted and not usable this session:** Nykaa's Q4 FY26 investor presentation
+**Two primary PDFs attempted and not usable for this build:** Nykaa's Q4 FY26 investor presentation
 (returned only digital-signature certificate metadata when fetched) and Eternal's Q4 FY26
 shareholder letter PDF (exceeded the fetch tool's 10MB size limit).
