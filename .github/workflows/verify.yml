@@ -1,0 +1,45 @@
+name: verify
+
+# The inputs are committed -- data/raw/marketplace_disclosures.csv is eleven rows
+# transcribed from each company's own results disclosures -- so CI can rebuild the
+# benchmark and the reports from scratch and check that what is committed is what
+# the code actually produces.
+#
+# Everything this project builds is text: a CSV and five PDFs with no charts in
+# them. That makes an exact comparison the right test rather than a tolerance,
+# and it catches the failure that matters here -- a number edited into a report
+# without rerunning the benchmark that produces it.
+#
+# The PDFs are only comparable because src/build_pdf.py sets rl_config.invariant;
+# reportlab otherwise stamps each build with the wall clock and a random document
+# ID. The markdown sources in reports/ are written by hand and are inputs, not
+# outputs, so a rebuild leaves them alone.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Rebuild the benchmark and the reports
+        working-directory: src
+        run: |
+          python benchmark.py
+          python build_pdf.py
+
+      - name: Committed outputs reproduce exactly
+        run: git diff --exit-code -- outputs reports
